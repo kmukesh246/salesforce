@@ -1,0 +1,65 @@
+http://localhost:8081/getHotels
+
+Response:
+["Mumbai","Bengaluru","Chennai","New Delhi"]
+
+http://localhost:8081/searchHotels/Mumbai
+{"message":null,"hotelList":[{"hid":1,"hname":"Taj Coromandel","address":"India Gate","city":"Mumbai","state":"Maharastra"},{"hid":2,"hname":"Vivanta by Taj","address":"Dharavi","city":"Mumbai","state":"Maharastra"}]}
+
+http://localhost:8081/viewHotel/1
+{"selectedHotel":{"hid":1,"hname":"Taj Coromandel","address":"India Gate","city":"Mumbai","state":"Maharastra"},"tableList":[{"tableName":"Table II 4 Seats","tableId":15,"hotel":{"hid":1,"hname":"Taj Coromandel","address":"India Gate","city":"Mumbai","state":"Maharastra"}},{"tableName":"Table III 10 Seats","tableId":16,"hotel":{"hid":1,"hname":"Taj Coromandel","address":"India Gate","city":"Mumbai","state":"Maharastra"}},{"tableName":"Table II 4 Seats","tableId":17,"hotel":{"hid":1,"hname":"Taj Coromandel","address":"India Gate","city":"Mumbai","state":"Maharastra"}},{"tableName":"Table I 2 Seats","tableId":18,"hotel":{"hid":1,"hname":"Taj Coromandel","address":"India Gate","city":"Mumbai","state":"Maharastra"}}],"menuList":[{"menuName":"Pohay","menuId":1,"menuRate":200,"hotel":{"hid":1,"hname":"Taj Coromandel","address":"India Gate","city":"Mumbai","state":"Maharastra"}},{"menuName":"Misal Pav","menuId":2,"menuRate":100,"hotel":{"hid":1,"hname":"Taj Coromandel","address":"India Gate","city":"Mumbai","state":"Maharastra"}},{"menuName":"Sabudana Khichdi","menuId":3,"menuRate":300,"hotel":{"hid":1,"hname":"Taj Coromandel","address":"India Gate","city":"Mumbai","state":"Maharastra"}},{"menuName":"Bharli Vangi","menuId":4,"menuRate":320,"hotel":{"hid":1,"hname":"Taj Coromandel","address":"India Gate","city":"Mumbai","state":"Maharastra"}},{"menuName":"Vada Pav","menuId":5,"menuRate":150,"hotel":{"hid":1,"hname":"Taj Coromandel","address":"India Gate","city":"Mumbai","state":"Maharastra"}},{"menuName":"Pithla Bhakri","menuId":6,"menuRate":250,"hotel":{"hid":1,"hname":"Taj Coromandel","address":"India Gate","city":"Mumbai","state":"Maharastra"}},{"menuName":"Aamti","menuId":7,"menuRate":100,"hotel":{"hid":1,"hname":"Taj Coromandel","address":"India Gate","city":"Mumbai","state":"Maharastra"}},{"menuName":"Rassa","menuId":9,"menuRate":170,"hotel":{"hid":1,"hname":"Taj Coromandel","address":"India Gate","city":"Mumbai","state":"Maharastra"}}]}
+
+
+<div id="myModal" class="modal">
+				<div class="modal-content">
+					<span class="close">&times;</span>
+					<div>
+						<div>Email id</div>
+						<div>
+							<input class="inputtext" type="text" name="userMailId"
+								value="${validuserEmailId}" readonly />
+						</div>
+					</div>
+					<div>
+						<div>Select Table</div>
+						<div>
+							<input class="inputtext" type="text" list="tablesList"
+								name="tableSelected" required="required" />
+						</div>
+					</div>
+					<div>
+						<div>No. of persons</div>
+						<div>
+							<input class="inputtext" type="text" name="personCount"
+								required="required" />
+						</div>
+					</div>
+          <div>
+						<div>Select from menu</div>
+						<div>
+							<input type="text" class="inputtext" list="menulist" name="menuSelected"
+								id="menuSelected" />
+						</div>
+					</div>
+          <button  class="button" style="width: 100%;margin-top: 20px;" type="button" name="addbtn" onclick="myFunction()">ADD</button>
+					<datalist id="tablesList"> <c:forEach
+						items="${tableList}" var="t">
+						<option value="<c:out value="${t.getTableName()}"/>">
+					</c:forEach> </datalist>
+					<table id="menuTable" border="1">
+						<tr>
+							<td>Item Selected</td>
+							<td>Price of the item</td>
+							<td>Quantity</td>
+						</tr>
+					</table>
+          					<input type="text" hidden name="menuS" id="menuS" />
+					<button type="submit" class="button" style="width: 100%;margin-top: 20px;" name="addbtn" onclick="readTable()">Place
+						Reservation</button>
+					</form>
+					<datalist id="menulist"> <c:forEach items="${menuList}"
+						var="m">
+						<option
+							value="<c:out value="${m.getMenuName()}"/>----Rs.<c:out value="${m.getMenuRate()}"/>.00">
+					</c:forEach> </datalist>
+				</div>

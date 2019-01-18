@@ -1,0 +1,323 @@
+/*
+*primary - #FFBE03
+*secondary - #FDFDFD
+*Brown - #D99F0C
+*grey - #DED9D5
+*#Dark brown -766A68
+*light yello - #FCDFA2
+*lig geay - #AFB8C7
+*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
+    line-height: 1.7;
+    /* background-color: #FFBE03; */
+    font-size: 14px;
+}
+.background-body{
+	background:linear-gradient(to right bottom ,#ffbe03eb,#fcdfa2e8),url(http://2.bp.blogspot.com/-XWNJBMyuJ1E/U8K_12OHVnI/AAAAAAAAIpw/0tDEDL9dPoM/s1600/Hotel-HD-wallpapers.jpg);
+    height: 100vh;
+    width: 100vw;
+}
+.heading-block{
+	position: absolute;
+    top: 30%;
+	left: 50%;
+	transform: translateX(-50%);
+	color: #766A68;
+    text-transform: uppercase;
+}
+.title-heading{
+    letter-spacing: 10px;
+}
+.side-heading{
+	letter-spacing: 12px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.button {
+	display: inline-block;
+    padding: 15px 25px;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #FDFDFD;
+    background-color: #766A68;
+    border: none;
+    border-radius: 50px;
+    margin-bottom: 15px;
+    width: 130px;
+    box-shadow: 0 3px #999;
+}
+  
+  .button:hover {background-color: #AFB8C7;color: #766A68}
+  
+  .button:active {
+	color: #766A68;
+	background-color: #AFB8C7;
+	box-shadow: 0 5px #666;
+	transform: translateY(4px);
+  }
+  .btn-grp{
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+
+  .inputtext {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+.inputtext:focus {
+    border: 1.2px solid #555;
+}
+.login-container{
+	position: absolute;
+    top: 20%;
+    transform: translate(-50%);
+    left: 50%;
+    background-color: #FDFDFD;
+	padding: 20px;
+	box-shadow: 6px 7px 15px 0px #766A68;
+}
+
+.registration-container{
+	position: absolute;
+    top: 12%;
+    transform: translate(-50%);
+    left: 50%;
+    background-color: #FDFDFD;
+	padding: 20px;
+	box-shadow: 6px 7px 15px 0px #766A68;
+}
+
+.heading-page{
+    color: #FFBE03;
+    text-align: center;
+}
+.form-fields{
+	display: flex;
+    flex-direction: column;
+}
+.form-field-ele{
+	display: flex;
+}
+.input-btn{
+	display: block;
+    padding: 10px 11px;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+    color: #FDFDFD;
+    background-color: #766A68;
+    border: none;
+    text-align: center;
+    border-radius: 50px;
+    margin-bottom: 3px;
+    margin: auto;
+    width: 99px;
+    box-shadow: 0 3px #999;
+}
+.login-btn-container{
+	padding-top: 10px
+}
+.app-bar{
+    background-color: #FFBE03;
+    color: #FDFDFD;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px 10px 15px;
+}
+.app-bar-icon{
+    height: 17px;
+    padding-right: 10px;
+}
+.input-drop-down{
+    width: 100%;
+    padding: 10px 2px 10px 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+.input-drop-down:focus {
+    border: 1.2px solid #555;
+}
+.display-hotel-table th,.display-hotel-table td {
+    padding: 8px;
+    text-align: left;
+}
+.display-hotel-table{
+    border: none;
+    margin: auto;
+    margin-top: 50px;
+    color: #766A68;
+    width: 80%;
+    border-collapse: collapse;
+}
+.dis-hotel-table-heading{
+    background: #FDFDFD;
+}
+.hotelblock{
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    padding: 5px;
+    box-shadow: 3px 3px 8px #672c01;
+    background: linear-gradient(to right bottom,#ffbe03eb,#fcdfa2e8);
+}
+.hotel-details{
+    font-size: 30px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.hotel-address{
+
+}
+
+a, u {
+    text-decoration: none;
+}
+
+.payment-container{
+	position: absolute;
+    top: 10%;
+    transform: translate(-50%);
+    left: 50%;
+    background-color: #FDFDFD;
+	padding: 10px;
+	box-shadow: 6px 7px 15px 0px #766A68;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 458px;
+    height: 450px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#menuTable {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#menuTable td, #menuTable th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#menuTable tr:nth-child(even){background-color: #f2f2f2;}
+
+#menuTable tr:hover {background-color: #ddd;}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}

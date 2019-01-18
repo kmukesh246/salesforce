@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Bridge Creek</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:700,400" rel="stylesheet">
+<link href="css/main.css" rel="stylesheet">
+</head>
+<body>
+<div class="background-body">
+    <div class="login-container">
+    <h1 class="heading-page">Login</h1>
+    <font id ="err-msg" color="red"></font>
+            <div class="form-fields">
+                <div>
+                    <span>User ID</span>
+                    <input type="text" class="inputtext" id="emailId" required="required" /><form:errors path="user.emailId"/>
+                </div>
+                <div>
+                    <span>Password</span>
+                    <input type="password" class="inputtext" id="password" required="required" /><form:errors path="user.password"/>
+                </div>
+                <div id="login" class = "login-btn-container">
+                <input class="input-btn"  value="Login" />
+                </div>
+                
+            </div>
+    <h4>Don't have an account?</h4> <a href="registration.html">Create one here</a>
+    </div>
+    <a href="http://localhost:8081/google/login">Login with Google</a>
+</div>
+<script src="js/login.js"></script>
+ </body>
+</html>
