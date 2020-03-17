@@ -1,0 +1,78 @@
+<template>
+    
+    <!-- Input Fields -->
+    <lightning-layout >        
+            <lightning-layout-Item padding="around-small" size="12">
+                <div class="row">
+                    <lightning-layout multiple-rows="true">
+                        
+                        <lightning-layout-Item class="leftItem" size="6">
+                            <lightning-input name="stateRegionInput" value={stateRegion}
+                                             data-id ="input_stateRegion" label="State / Region" 
+                                             maxlength="35" onchange={handleFormInputChange} ></lightning-input>
+                        </lightning-layout-Item>
+                            
+                        <lightning-layout-Item  size="6"> 
+                            <lightning-input name="cityOrTownInput" value={cityOrTown}
+                                             data-id ="input_cityOrTown" label="City / Town" 
+                                             maxlength="35" onchange={handleFormInputChange} > </lightning-input>                                               
+                        </lightning-layout-Item>
+                        <lightning-layout-Item class="leftItem" size="6"> 
+                            <lightning-input name="addressLine1Input" value={addressLine1}
+                                             data-id = "input_addressLine1" label="Address Line 1" 
+                                             maxlength="35" onchange={handleFormInputChange} ></lightning-input>                                                                           
+                        </lightning-layout-Item>
+                        <lightning-layout-Item size="6"> 
+                            <lightning-input name="addressLine2Input" value={addressLine2}
+                                             data-id ="input_addressLine2Input" label="Address Line 2" 
+                                             maxlength="35" onchange={handleFormInputChange} ></lightning-input>
+                        </lightning-layout-Item>
+                        <lightning-layout-Item class="leftItem" size="6"> 
+                            <lightning-input name="zipCodeInput" value={zipCode}
+                                             data-id ="input_zipCodeInput" label="Postal Code" 
+                                             maxlength="35" onchange={handleFormInputChange} ></lightning-input>                        
+                        </lightning-layout-Item>
+                        <lightning-layout-Item padding="around-small" size="6"> 
+                            <lightning-input readonly name="countryInput" value={country}
+                                             data-id ="input_Country" label="Country" 
+                                             maxlength="35" onchange={handleFormInputChange} ></lightning-input>
+                        </lightning-layout-Item>
+                    </lightning-layout>
+                    <br></br>
+
+                    <div if:true={showSpinner}>
+                        <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+                    </div>
+                    
+                    <div if:true={showErrorMessage}>
+                        {errorMessage}
+                    </div>
+                    
+                    <div if:true={showResults}>  
+                        <h1>Please select the address</h1>
+                        <lightning-layout >            
+                            <lightning-layout-Item padding="around-small" size="10">
+                                <lightning-radio-group name="radioGroup"
+                                                      label=""
+                                                      options={options}
+                                                      value={selectedvalue}
+                                                      onchange={handleChange}
+                                                      type="radio"></lightning-radio-group>                
+                            </lightning-layout-Item>                           
+                        </lightning-layout>                    
+                    </div>                                                                
+                </div>
+            </lightning-layout-Item>        
+        </lightning-layout>
+
+    <!-- Buttons -->
+    <div class="slds-float_right">
+        <lightning-button variant="neutral" label="Cancel"
+                            title="Cancel" onclick= "{ closeModel }"></lightning-button>
+        <lightning-button variant="brand" label="Save"
+                            title="Save" onclick= "{ handleSave }"></lightning-button>                                        
+        <lightning-button variant="brand" label="Validate" 
+                            title="Validate" onclick= "{ handleValidateAddress }"></lightning-button>             
+    </div>
+
+</template>
