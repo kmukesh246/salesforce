@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title = "My Lighting Web Component" icon-name="custom:custom4">
+        <lightning-layout vertical-align="center">
+            <lightning-layout-item padding="around-small">
+                <lightning-formatted-text value={name}></lightning-formatted-text>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small">
+                <lightning-formatted-phone value={phone}></lightning-formatted-phone>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small">
+                    <lightning-formatted-email value={email}></lightning-formatted-email>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small">
+                <lightning-formatted-text value = {userId} ></lightning-formatted-text>
+            </lightning-layout-item>
+        </lightning-layout>
+        <lightning-layout vertical-align="center">
+            <lightning-layout-item padding="around-small">
+                <lightning-button label = "call Js" variant="brand" onclick = {handleClick} ></lightning-button>
+            </lightning-layout-item>
+        </lightning-layout>
+
+    </lightning-card>
+</template>

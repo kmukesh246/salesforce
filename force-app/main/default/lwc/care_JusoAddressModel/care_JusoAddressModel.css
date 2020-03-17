@@ -1,0 +1,12 @@
+.THIS .footer{
+    bottom:0;   
+}
+.THIS.slds-modal__footer{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+.THIS .leftItem{
+    padding-right: 20px;
+}
