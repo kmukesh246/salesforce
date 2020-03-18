@@ -1,0 +1,29 @@
+<template>
+<lightning-card title = "Account Viewer - Data Table">
+            
+    <lightning-datatable
+            label = "Account Table"
+            key-field="id"
+            data={data}
+            columns={columns}>
+    </lightning-datatable>
+</lightning-card>
+<lightning-card title="Contact viewer - Data Table">
+    <lightning-datatable
+            label = "Contact Table"
+            key-field="FirstName"
+            data={contactData}
+            columns={ContactColumns}>
+    </lightning-datatable>                              
+</lightning-card>
+<lightning-card title ="Account Insert Form">        
+
+    <lightning-record-form
+        object-api-name={accountObject}
+        fields={myFields}
+        onsuccess={handleAccountCreated}>
+    </lightning-record-form>
+
+</lightning-card>
+
+</template>

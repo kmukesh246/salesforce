@@ -1,0 +1,10 @@
+<template>
+    <!-- Example for Parent to Child events -->
+    <div class="slds-m-around_large">
+        <c-child-component onbtnclick = {handleEvent}></c-child-component>
+        {message}
+    </div>
+    <div class="slds-m-around_large">
+        <lightning-button label="Click me" value ="click" onclick = {handleClick}></lightning-button>
+    </div>
+</template>
